@@ -29,7 +29,7 @@ def fetch_tlp_stat(self, textbuffer):
         textbuffer.set_text('tlp-stat executable not found.')
         return
 
-    tlpstat = check_output([sudo_cmd, "tlp-stat"]).decode(sys.stdout.encoding)
+    tlpstat = check_output([sudo_cmd, tlpstat_cmd]).decode(sys.stdout.encoding)
     textbuffer.set_text(tlpstat)
 
 
